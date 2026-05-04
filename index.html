@@ -77,7 +77,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .marquee-section{background:var(--navy2);padding:clamp(28px,4vw,48px) 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);overflow:hidden;position:relative}
 .marquee-section::before,.marquee-section::after{content:'';position:absolute;top:0;width:120px;height:100%;z-index:2;pointer-events:none}
 .marquee-section::before{left:0;background:linear-gradient(to right,var(--navy2),transparent)}
-.marquee-section::after{right:0;background:linear-gradient(to left,var(--navy2),transparent)}
+.marquee-section::after{right:0;background:linear-gradient(to left,transparent)}
 .marquee-label{text-align:center;font-size:var(--fs-xs);color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:clamp(12px,2vw,20px)}
 .marquee-track{display:flex;align-items:center;min-height:60px;animation:marquee 40s linear infinite;will-change:transform}
 .marquee-track:hover{animation-play-state:paused}
@@ -93,9 +93,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .pain{background:#fff;padding:var(--sp-xl) var(--px)}
 .pain-inner{max-width:1140px;margin:0 auto}
 .pain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,24px)}
-.pain-card{background:var(--gray1);border-radius:var(--radius2);padding:clamp(20px,3vw,32px) clamp(16px,2.5vw,26px);border:1px solid transparent;transition:.3s;position:relative;overflow:hidden}
+.pain-card{background:var;border-radius:var(--radius2);padding:clamp(20px,3vw,32px) clamp(16px,2.5vw,26px);border:1px solid transparent;transition:.3s;position:relative;overflow:hidden}
 .pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--teal2));opacity:0;transition:.3s}
-.pain-card:hover{border-color:var(--gray2);box-shadow:0 20px 60px rgba(0,0,0,.08);transform:translateY(-4px)}
+.pain-card:hover{border-color:var;box-shadow:0 20px 60px rgba(0,0,0,.08);transform:translateY(-4px)}
 .pain-card:hover::before{opacity:1}
 .pain-icon{font-size:clamp(20px,2.5vw,28px);margin-bottom:clamp(12px,2vw,20px);display:block}
 .pain-card h4{font-size:var(--fs-base);font-weight:700;margin-bottom:8px;line-height:1.5;color:var(--text);word-break:keep-all}
