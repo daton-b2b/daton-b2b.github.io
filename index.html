@@ -78,7 +78,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .marquee-section::before,.marquee-section::after{content:'';position:absolute;top:0;width:120px;height:100%;z-index:2;pointer-events:none}
 .marquee-section::before{left:0;background:linear-gradient(to right,#fff,transparent)}
 .marquee-section::after{right:0;background:linear-gradient(to left,#fff,transparent)}
-.marquee-label{text-align:center;font-size:var(--fs-xs);color:#fff;
+.marquee-label{text-align:center;font-size:var(--fs-xs);color:rgba(255,255,255,.35);
 .marquee-track{display:flex;align-items:center;min-height:60px;animation:marquee 40s linear infinite;will-change:transform}
 .marquee-track:hover{animation-play-state:paused}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
