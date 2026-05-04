@@ -83,6 +83,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .marquee-track:hover{animation-play-state:paused}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .marquee-item{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:clamp(200px,17vw,260px)}
+.marquee-track-reverse{display:flex;align-items:center;min-height:60px;animation:marqueeReverse 40s linear infinite;will-change:transform}
+.marquee-track-reverse:hover{animation-play-state:paused}
+@keyframes marqueeReverse{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
 
 /* ── SECTION COMMON ── */
 .section-eyebrow{font-size:var(--fs-xs);font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:clamp(8px,1vw,12px);text-align:center}
@@ -514,6 +517,19 @@ footer p{font-size:var(--fs-xs);line-height:1.8}
     <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1px6fH3M6kpGONXhznzadPJpJCFSt_I24" alt="로고6" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
     <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/14-Xem2cAN2qfhZY7NQijG_xO04NxnA9u" alt="로고7" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
     <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1-1qquQBdaFK7hpNFLhTzvZuNg-Ee87GF" alt="로고8" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+  </div>
+  <!-- 역방향 두번째 줄 -->
+  <div class="marquee-track-reverse">
+    <!-- 원본 세트 -->
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1JRYnL0cX9CblDkIPzgDO8IK1zDjFensa" alt="역로고1" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/14iE2prrFBwdQlxF8hiYx_gCr-T5SbvMJ" alt="역로고2" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1GGUvAZPZxDm2eh8136JWmtdFmhH5yYNe" alt="역로고3" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1VvTRd6b7KfaH6uH-d7KISWtliimXLpF-" alt="역로고4" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <!-- 무한 스크롤용 복사 세트 -->
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1JRYnL0cX9CblDkIPzgDO8IK1zDjFensa" alt="역로고1" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/14iE2prrFBwdQlxF8hiYx_gCr-T5SbvMJ" alt="역로고2" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1GGUvAZPZxDm2eh8136JWmtdFmhH5yYNe" alt="역로고3" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
+    <div class="marquee-item"><img src="https://lh3.googleusercontent.com/d/1VvTRd6b7KfaH6uH-d7KISWtliimXLpF-" alt="역로고4" style="max-height:44px;width:auto;object-fit:contain;filter:none;opacity:1"></div>
   </div>
 </div>
 
