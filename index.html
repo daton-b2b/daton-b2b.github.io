@@ -56,34 +56,35 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .nav-mobile.open{display:flex}
 
 /* ── HERO ── */
-.hero{background:#f0f4ff;color:var(--text);padding:clamp(80px,12vw,140px) var(--px) clamp(60px,8vw,100px);position:relative;overflow:hidden;min-height:clamp(620px,75vw,800px);display:flex;align-items:center}
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;opacity:.35;z-index:0;filter:brightness(.7) saturate(.8)}
+.hero{background:#f0f4fb;color:var(--text);padding:clamp(48px,7vw,80px) var(--px) clamp(48px,7vw,72px);position:relative;overflow:hidden;min-height:clamp(380px,45vw,520px);display:flex;align-items:center;flex-direction:column;justify-content:center}
+.hero-photo{display:none}
 .hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-#hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.55;z-index:5}
+#hero-canvas{display:none}
 .hero-inner{max-width:1140px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:10;width:100%;gap:var(--sp-md)}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);padding:5px 14px;border-radius:20px;font-size:var(--fs-xs);font-weight:600;color:var(--blue3);letter-spacing:.5px;white-space:nowrap}
-.hero-tag span{width:6px;height:6px;background:#4ade80;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.08);border:1px solid rgba(37,99,235,.18);padding:5px 14px;border-radius:20px;font-size:var(--fs-xs);font-weight:600;color:var(--blue);letter-spacing:.5px;white-space:nowrap}
+.hero-tag span{width:6px;height:6px;background:#22c55e;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:clamp(24px,5vw,52px);font-weight:900;line-height:1.2;letter-spacing:clamp(-1px,-0.1em,-1.5px);white-space:nowrap;text-align:center}
-.hero h1{font-size:clamp(24px,5vw,52px);font-weight:900;line-height:1.2;letter-spacing:clamp(-1px,-0.1em,-1.5px);white-space:nowrap;text-align:center}
-.hero h1 em{font-style:normal;background:linear-gradient(135deg,#2563eb,#2dd4bf);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:clamp(13px,1.6vw,17px);color:var(--gray5);line-height:1.9;white-space:nowrap;text-align:center}
+.hero h1{font-size:clamp(24px,5vw,52px);font-weight:900;line-height:1.2;letter-spacing:clamp(-1px,-0.1em,-1.5px);white-space:nowrap;text-align:center;color:var(--navy)}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(13px,1.6vw,17px);color:var(--gray4);line-height:1.9;white-space:nowrap;text-align:center}
 .hero-btns{display:flex;justify-content:center;gap:clamp(8px,1.5vw,12px);flex-wrap:wrap}
 .btn-primary{background:var(--blue);color:#fff;padding:clamp(11px,1.5vw,14px) clamp(20px,2.5vw,30px);border-radius:8px;font-weight:700;font-size:var(--fs-base);cursor:pointer;border:none;transition:.2s;font-family:'Noto Sans KR',sans-serif;white-space:nowrap}
 .btn-primary:hover{background:#1d4ed8;transform:translateY(-1px)}
-.btn-outline{background:transparent;color:rgba(255,255,255,.8);padding:clamp(11px,1.5vw,14px) clamp(20px,2.5vw,30px);border-radius:8px;font-weight:600;font-size:var(--fs-base);border:1px solid rgba(255,255,255,.25);cursor:pointer;transition:.2s;font-family:'Noto Sans KR',sans-serif;white-space:nowrap}
-.btn-outline:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+.btn-outline{background:transparent;color:var(--gray5);padding:clamp(11px,1.5vw,14px) clamp(20px,2.5vw,30px);border-radius:8px;font-weight:600;font-size:var(--fs-base);border:1px solid var(--gray2);cursor:pointer;transition:.2s;font-family:'Noto Sans KR',sans-serif;white-space:nowrap}
+.btn-outline:hover{background:var(--gray2);border-color:var(--gray3)}
 
+  
 /* ── MARQUEE ── */
-.marquee-section{background:var(--navy2);padding:clamp(28px,4vw,48px) 0;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);overflow:hidden;position:relative}
+.marquee-section{background:#fff;padding:clamp(16px,2vw,24px) 0;border-top:1px solid var(--gray2);border-bottom:1px solid var(--gray2);overflow:hidden;position:relative}
 .marquee-section::before,.marquee-section::after{content:'';position:absolute;top:0;width:120px;height:100%;z-index:2;pointer-events:none}
-.marquee-section::before{left:0;background:linear-gradient(to right,var(--navy2),transparent)}
-.marquee-section::after{right:0;background:linear-gradient(to left,var(--navy2),transparent)}
-.marquee-label{text-align:center;font-size:var(--fs-xs);color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:clamp(12px,2vw,20px)}
-.marquee-track{display:flex;align-items:center;min-height:60px;animation:marquee 40s linear infinite;will-change:transform}
+.marquee-section::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.marquee-section::after{right:0;background:linear-gradient(to left,#fff,transparent)}
+.marquee-label{text-align:center;font-size:var(--fs-xs);color:var(--gray3);letter-spacing:2px;text-transform:uppercase;margin-bottom:clamp(8px,1vw,12px)}
+.marquee-track{display:flex;align-items:center;min-height:44px;animation:marquee 40s linear infinite;will-change:transform}
 .marquee-track:hover{animation-play-state:paused}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.marquee-item{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:clamp(200px,17vw,260px)}
+.marquee-item{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:clamp(160px,14vw,220px)}
+  
 
 /* ── SECTION COMMON ── */
 .section-eyebrow{font-size:var(--fs-xs);font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:clamp(8px,1vw,12px);text-align:center}
@@ -369,116 +370,31 @@ footer p{font-size:var(--fs-xs);line-height:1.8}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <!-- 기본 그라디언트 배경 -->
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#03071a 0%,#050e26 45%,#03071a 100%);z-index:0"></div>
-
-    <!-- 헥사곤 그리드 SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0.18" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 640">
+    <!-- 밝은 헥사곤 배경 SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0.45" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 520">
       <defs>
         <pattern id="hexPat" x="0" y="0" width="80" height="92.4" patternUnits="userSpaceOnUse">
-          <!-- 헥사곤 폴리라인 (flat-top) -->
-          <polygon points="40,0 80,23.1 80,69.3 40,92.4 0,69.3 0,23.1" fill="none" stroke="rgba(59,130,246,0.55)" stroke-width="0.7"/>
+          <polygon points="40,0 80,23.1 80,69.3 40,92.4 0,69.3 0,23.1" fill="none" stroke="rgba(37,99,235,0.12)" stroke-width="1"/>
         </pattern>
         <pattern id="hexPat2" x="40" y="46.2" width="80" height="92.4" patternUnits="userSpaceOnUse">
-          <polygon points="40,0 80,23.1 80,69.3 40,92.4 0,69.3 0,23.1" fill="none" stroke="rgba(59,130,246,0.3)" stroke-width="0.5"/>
+          <polygon points="40,0 80,23.1 80,69.3 40,92.4 0,69.3 0,23.1" fill="none" stroke="rgba(37,99,235,0.07)" stroke-width="0.8"/>
         </pattern>
-        <!-- 강조 헥사곤 몇 개 -->
-        <radialGradient id="hexGlow1" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(59,130,246,0.25)"/>
-          <stop offset="100%" stop-color="rgba(59,130,246,0)"/>
-        </radialGradient>
-        <radialGradient id="hexGlow2" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="rgba(20,184,166,0.2)"/>
-          <stop offset="100%" stop-color="rgba(20,184,166,0)"/>
-        </radialGradient>
       </defs>
-      <rect width="1440" height="640" fill="url(#hexPat)"/>
-      <rect width="1440" height="640" fill="url(#hexPat2)"/>
-      <!-- 강조 헥사곤들 -->
-      <polygon points="600,138 640,161.1 640,207.3 600,230.4 560,207.3 560,161.1" fill="url(#hexGlow1)" stroke="rgba(59,130,246,0.9)" stroke-width="1.2"/>
-      <polygon points="840,92 880,115.1 880,161.3 840,184.4 800,161.3 800,115.1" fill="url(#hexGlow2)" stroke="rgba(20,184,166,0.8)" stroke-width="1.2"/>
-      <polygon points="1100,230 1140,253.1 1140,299.3 1100,322.4 1060,299.3 1060,253.1" fill="url(#hexGlow1)" stroke="rgba(59,130,246,0.7)" stroke-width="1"/>
-      <polygon points="320,300 360,323.1 360,369.3 320,392.4 280,369.3 280,323.1" fill="url(#hexGlow2)" stroke="rgba(20,184,166,0.6)" stroke-width="1"/>
-      <polygon points="1260,180 1300,203.1 1300,249.3 1260,272.4 1220,249.3 1220,203.1" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="0.8"/>
-      <polygon points="160,200 200,223.1 200,269.3 160,292.4 120,269.3 120,223.1" fill="none" stroke="rgba(20,184,166,0.4)" stroke-width="0.8"/>
+      <rect width="1440" height="520" fill="url(#hexPat)"/>
+      <rect width="1440" height="520" fill="url(#hexPat2)"/>
     </svg>
-
-    <!-- 빛나는 오브 (글로우) -->
+    <!-- 부드러운 블루 글로우 -->
     <div style="position:absolute;inset:0;z-index:2;pointer-events:none">
-      <!-- 좌측 대형 파란 글로우 -->
-      <div style="position:absolute;width:600px;height:500px;left:-100px;top:50%;transform:translateY(-50%);background:radial-gradient(ellipse,rgba(30,92,191,0.22) 0%,transparent 70%);border-radius:50%"></div>
-      <!-- 우측 중형 청록 글로우 -->
-      <div style="position:absolute;width:500px;height:400px;right:-80px;top:30%;background:radial-gradient(ellipse,rgba(13,148,136,0.18) 0%,transparent 70%);border-radius:50%"></div>
-      <!-- 중앙 상단 소형 글로우 -->
-      <div style="position:absolute;width:300px;height:250px;left:50%;top:-50px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(59,130,246,0.12) 0%,transparent 70%);border-radius:50%"></div>
+      <div style="position:absolute;width:700px;height:500px;left:-150px;top:50%;transform:translateY(-50%);background:radial-gradient(ellipse,rgba(37,99,235,0.07) 0%,transparent 70%);border-radius:50%"></div>
+      <div style="position:absolute;width:600px;height:400px;right:-100px;top:20%;background:radial-gradient(ellipse,rgba(13,148,136,0.06) 0%,transparent 70%);border-radius:50%"></div>
     </div>
-
-    <!-- 회로/라인 SVG 오버레이 -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;z-index:3;opacity:0.35" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 640">
-      <defs>
-        <filter id="lineBlur"><feGaussianBlur stdDeviation="1.2"/></filter>
-        <filter id="nodGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <!-- 수평 데이터 라인들 -->
-      <line x1="0" y1="160" x2="380" y2="160" stroke="rgba(59,130,246,0.5)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="380" y1="160" x2="520" y2="240" stroke="rgba(59,130,246,0.5)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="520" y1="240" x2="780" y2="240" stroke="rgba(59,130,246,0.5)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="780" y1="240" x2="920" y2="160" stroke="rgba(59,130,246,0.5)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="920" y1="160" x2="1440" y2="160" stroke="rgba(59,130,246,0.5)" stroke-width="0.8" filter="url(#lineBlur)"/>
-
-      <line x1="0" y1="400" x2="200" y2="400" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="200" y1="400" x2="340" y2="320" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="340" y1="320" x2="600" y2="320" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="600" y1="320" x2="740" y2="400" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="740" y1="400" x2="1100" y2="400" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="1100" y1="400" x2="1240" y2="320" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-      <line x1="1240" y1="320" x2="1440" y2="320" stroke="rgba(20,184,166,0.45)" stroke-width="0.8" filter="url(#lineBlur)"/>
-
-      <!-- 수직 연결 라인 -->
-      <line x1="380" y1="100" x2="380" y2="220" stroke="rgba(59,130,246,0.4)" stroke-width="0.7" filter="url(#lineBlur)"/>
-      <line x1="780" y1="180" x2="780" y2="320" stroke="rgba(59,130,246,0.4)" stroke-width="0.7" filter="url(#lineBlur)"/>
-      <line x1="1100" y1="340" x2="1100" y2="460" stroke="rgba(20,184,166,0.4)" stroke-width="0.7" filter="url(#lineBlur)"/>
-      <line x1="340" y1="260" x2="340" y2="380" stroke="rgba(20,184,166,0.4)" stroke-width="0.7" filter="url(#lineBlur)"/>
-
-      <!-- 노드 포인트 (교차점) -->
-      <g filter="url(#nodGlow)">
-        <circle cx="380" cy="160" r="3.5" fill="rgba(59,130,246,0.9)"/>
-        <circle cx="520" cy="240" r="3" fill="rgba(59,130,246,0.75)"/>
-        <circle cx="780" cy="240" r="4" fill="rgba(59,130,246,0.95)"/>
-        <circle cx="920" cy="160" r="3" fill="rgba(59,130,246,0.8)"/>
-        <circle cx="200" cy="400" r="3.5" fill="rgba(20,184,166,0.9)"/>
-        <circle cx="340" cy="320" r="4" fill="rgba(20,184,166,0.95)"/>
-        <circle cx="600" cy="320" r="3" fill="rgba(20,184,166,0.8)"/>
-        <circle cx="740" cy="400" r="3.5" fill="rgba(20,184,166,0.9)"/>
-        <circle cx="1100" cy="400" r="4" fill="rgba(20,184,166,0.95)"/>
-        <circle cx="1240" cy="320" r="3" fill="rgba(59,130,246,0.8)"/>
-        <!-- 작은 보조 노드 -->
-        <circle cx="160" cy="160" r="2" fill="rgba(59,130,246,0.5)"/>
-        <circle cx="1300" cy="160" r="2" fill="rgba(59,130,246,0.5)"/>
-        <circle cx="80" cy="400" r="2" fill="rgba(20,184,166,0.5)"/>
-        <circle cx="1380" cy="320" r="2" fill="rgba(20,184,166,0.5)"/>
-      </g>
-
-      <!-- 대각선 보조 라인 -->
-      <line x1="100" y1="80" x2="380" y2="160" stroke="rgba(59,130,246,0.2)" stroke-width="0.6" stroke-dasharray="4 6"/>
-      <line x1="1340" y1="520" x2="1100" y2="400" stroke="rgba(20,184,166,0.2)" stroke-width="0.6" stroke-dasharray="4 6"/>
-      <line x1="60" y1="480" x2="340" y2="320" stroke="rgba(20,184,166,0.15)" stroke-width="0.6" stroke-dasharray="3 8"/>
-      <line x1="1400" y1="100" x2="1240" y2="320" stroke="rgba(59,130,246,0.15)" stroke-width="0.6" stroke-dasharray="3 8"/>
-    </svg>
-
-    <!-- 하단 페이드 오버레이 -->
-    <div style="position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,rgba(3,7,26,0.9),transparent);z-index:4"></div>
-    <!-- 좌우 페이드 -->
-    <div style="position:absolute;top:0;left:0;bottom:0;width:120px;background:linear-gradient(to right,rgba(3,7,26,0.6),transparent);z-index:4"></div>
-    <div style="position:absolute;top:0;right:0;bottom:0;width:120px;background:linear-gradient(to left,rgba(3,7,26,0.6),transparent);z-index:4"></div>
   </div>
-<canvas id="hero-canvas"></canvas>
   <div class="hero-inner">
     <div class="hero-tag"><span></span> 대한민국 혁신 기업들이 선택한 엔터프라이즈 AI 교육</div>
     <h1>배우는 AI를 넘어,<br><em>AI와 함께 하는 조직</em></h1>
     <p>'수단'이 아닌, 비즈니스 문제 해결이라는 '결과'에 집중합니다.<br>자체 AI 기술력과 AWS 클라우드 인프라를 보유한 데이톤이, 귀사의 임직원들을 현업 맞춤형 AI 서비스 창출의 핵심 동력으로 바꿉니다.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="goTo('#contact')">기업 맞춤형 AX 컨설팅 신청</button>
+      <button class="btn-primary" onclick="goTo('#contact')">기업 맞춤형 AX 컨설팅 신청 →</button>
       <button class="btn-outline" onclick="goTo('#courses')">교육 과정 보기</button>
     </div>
   </div>
