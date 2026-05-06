@@ -169,6 +169,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,20px)}
 .course-card{background:#fff;border-radius:var(--radius2);overflow:hidden;border:1px solid var(--gray2);transition:.3s}
 .course-card:hover{box-shadow:0 24px 60px rgba(0,0,0,.1);transform:translateY(-4px);border-color:transparent}
+.course-photo-wrap{width:100%;height:240px;overflow:hidden;border-radius:10px 10px 0 0}
+.course-photo{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.course-card:hover .course-photo{transform:scale(1.04)}
 .course-top{padding:clamp(18px,2.5vw,28px) clamp(16px,2.5vw,26px) clamp(14px,2vw,20px)}
 .course-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:var(--fs-xs);font-weight:700;margin-bottom:clamp(10px,1.5vw,14px);letter-spacing:.3px}
 .badge-ai{background:#eff6ff;color:#1d4ed8}
@@ -187,6 +190,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .btn-more{border:1.5px solid var(--navy);color:var(--navy);background:#fff;padding:clamp(10px,1.5vw,13px) clamp(24px,3vw,36px);border-radius:8px;font-weight:700;font-size:var(--fs-sm);cursor:pointer;transition:.2s;font-family:'Noto Sans KR',sans-serif}
 .btn-more:hover{background:var(--navy);color:#fff}
 
+  
 /* ── KPI ── */
 .kpi{background:linear-gradient(160deg,#eef3fb 0%,#f0f5ff 50%,#e8f0fc 100%);padding:var(--sp-xl) var(--px)}
 .kpi-inner{max-width:1140px;margin:0 auto;text-align:center}
